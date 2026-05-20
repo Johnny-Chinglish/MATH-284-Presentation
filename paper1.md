@@ -1,4 +1,4 @@
-# Paper 1: To be added
+# Survival Function Estimation
 
 ## Author
 
