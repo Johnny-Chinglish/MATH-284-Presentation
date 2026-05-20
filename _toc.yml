@@ -1,0 +1,10 @@
+format: jb-book
+root: index
+
+parts:
+  - caption: Papers
+    chapters:
+      - file: presentation
+      - file: paper1
+      - file: paper2
+      - file: paper3
