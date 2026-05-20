@@ -1,4 +1,4 @@
-title: "MATH 284 Presentation"
+title: "MATH 284: Lifetime Data Analysis"
 author: "Johnny Chinglish"
 copyright: "2026"
 
@@ -15,3 +15,4 @@ html:
   use_repository_button: true
   use_issues_button: false
   use_edit_page_button: false
+  use_download_button: true
