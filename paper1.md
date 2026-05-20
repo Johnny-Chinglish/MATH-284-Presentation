@@ -138,29 +138,53 @@ A possible presentation outline:
 
 # Paper
 
-The following papers are listed in the order I plan to discuss them.
+This presentation focuses on **Tibshirani (1997)**. The main idea of the paper is to bring the lasso's $L_1$ shrinkage-and-selection principle into the Cox proportional hazards model.
 
-## Robert Tibshirani 1997
+The other two papers are included as origins and background. **Cox (1972)** provides the proportional hazards regression framework for censored survival data, while **Tibshirani (1996)** introduces the original lasso method for regression.
+
+Conceptually, the 1997 paper connects these two earlier ideas:
+
+$$
+\text{Cox proportional hazards regression}
++
+\text{lasso shrinkage and selection}
+\longrightarrow
+\text{lasso for the Cox model}.
+$$
+
+## Main Paper
+
+### Robert Tibshirani 1997
 
 **The LASSO Method for Variable Selection in the Cox Model**
+
+This is the main paper for my presentation. It proposes variable selection and shrinkage in Cox proportional hazards regression by optimizing the Cox partial likelihood under an $L_1$ constraint.
 
 [Open PDF](tibshirani-1997-lasso-cox.pdf)  
 <a href="tibshirani-1997-lasso-cox.pdf" download>Download PDF</a>
 
 <iframe src="tibshirani-1997-lasso-cox.pdf" width="100%" height="650px" style="border: 1px solid #ddd;"></iframe>
 
-## D. R. Cox 1972
+## Origin / Background Papers
+
+These papers are not the main focus of the presentation, but they explain where the 1997 Cox lasso paper comes from.
+
+### D. R. Cox 1972
 
 **Regression Models and Life-Tables**
+
+This paper is the origin of the Cox proportional hazards regression framework. It introduces regression modeling for censored failure-time data using a hazard model with an arbitrary baseline time function and a likelihood approach for inference on regression coefficients.
 
 [Open PDF](cox-1972-regression-models-and-life-tables.pdf)  
 <a href="cox-1972-regression-models-and-life-tables.pdf" download>Download PDF</a>
 
 <iframe src="cox-1972-regression-models-and-life-tables.pdf" width="100%" height="650px" style="border: 1px solid #ddd;"></iframe>
 
-## Robert Tibshirani 1996
+### Robert Tibshirani 1996
 
 **Regression Shrinkage and Selection via the Lasso**
+
+This paper is the origin of the lasso method. It introduces least absolute shrinkage and selection for regression, using an $L_1$ constraint to shrink coefficients and set some of them exactly equal to zero. The 1997 paper adapts this idea to Cox proportional hazards regression.
 
 [Open PDF](tibshirani-1996-lasso.pdf)  
 <a href="tibshirani-1996-lasso.pdf" download>Download PDF</a>
