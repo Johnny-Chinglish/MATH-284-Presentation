@@ -28,11 +28,47 @@ Because of the geometry of this constraint, the method can shrink some coefficie
 
 * **Compares lasso with stepwise selection:** Through real examples and simulations, the paper shows that the lasso can have better prediction accuracy and lower variability than stepwise selection.
 
-# Conversation with Robert Tibshirani
+# Conversation with Sir David Cox & Robert Tibshirani
 
-No separate interview or conversation source has been added yet.
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 1rem; margin-bottom: 1rem;">
 
-This section can later include background material on Robert Tibshirani, the development of the lasso, or the connection between the original lasso paper and this Cox model extension.
+  <div>
+    <h3>Sir David Cox</h3>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe
+        src="https://www.youtube.com/embed/TiHCNRUiLKc?start=327"
+        title="Conversation with Sir David Cox"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p>
+      <a href="https://www.youtube.com/watch?v=TiHCNRUiLKc&t=327s" target="_blank">
+        Watch on YouTube
+      </a>
+    </p>
+  </div>
+
+  <div>
+    <h3>Robert Tibshirani</h3>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe
+        src="https://www.youtube.com/embed/3rvl4KV41JE"
+        title="Conversation with Robert Tibshirani"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <p>
+      <a href="https://www.youtube.com/watch?v=3rvl4KV41JE" target="_blank">
+        Watch on YouTube
+      </a>
+    </p>
+  </div>
+
+</div>
 
 # Summary
 
