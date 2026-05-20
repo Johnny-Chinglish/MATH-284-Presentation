@@ -7,7 +7,7 @@ This website will first host my final presentation for MATH 284. In the future, 
 | Author | Paper |
 | --- | --- |
 | Johnny Chinglish | [MATH 284 Final Presentation](presentation.md) |
-| To be added | [Survival Function Estimation](paper1.md) |
+| Robert Tibshirani | [The LASSO Method for Variable Selection in the Cox Model](paper1.md) |
 | To be added | [Cox Proportional Hazards Model](paper2.md) |
 | To be added | [Competing Risks](paper3.md) |
 
