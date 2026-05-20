@@ -144,28 +144,28 @@ The following papers are listed in the order I plan to discuss them.
 
 **The LASSO Method for Variable Selection in the Cox Model**
 
-[Open PDF](papers/tibshirani-1997-lasso-cox.pdf)  
-{download}`Download PDF <papers/tibshirani-1997-lasso-cox.pdf>`
+[Open PDF](tibshirani-1997-lasso-cox.pdf)  
+<a href="tibshirani-1997-lasso-cox.pdf" download>Download PDF</a>
 
-<iframe src="papers/tibshirani-1997-lasso-cox.pdf" width="100%" height="650px"></iframe>
+<iframe src="tibshirani-1997-lasso-cox.pdf" width="100%" height="650px" style="border: 1px solid #ddd;"></iframe>
 
 ## D. R. Cox 1972
 
 **Regression Models and Life-Tables**
 
-[Open PDF](papers/cox-1972-regression-models-and-life-tables.pdf)  
-{download}`Download PDF <papers/cox-1972-regression-models-and-life-tables.pdf>`
+[Open PDF](cox-1972-regression-models-and-life-tables.pdf)  
+<a href="cox-1972-regression-models-and-life-tables.pdf" download>Download PDF</a>
 
-<iframe src="papers/cox-1972-regression-models-and-life-tables.pdf" width="100%" height="650px"></iframe>
+<iframe src="cox-1972-regression-models-and-life-tables.pdf" width="100%" height="650px" style="border: 1px solid #ddd;"></iframe>
 
 ## Robert Tibshirani 1996
 
 **Regression Shrinkage and Selection via the Lasso**
 
-[Open PDF](papers/tibshirani-1996-lasso.pdf)  
-{download}`Download PDF <papers/tibshirani-1996-lasso.pdf>`
+[Open PDF](tibshirani-1996-lasso.pdf)  
+<a href="tibshirani-1996-lasso.pdf" download>Download PDF</a>
 
-<iframe src="papers/tibshirani-1996-lasso.pdf" width="100%" height="650px"></iframe>
+<iframe src="tibshirani-1996-lasso.pdf" width="100%" height="650px" style="border: 1px solid #ddd;"></iframe>
 
 # Notes
 
