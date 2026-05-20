@@ -138,9 +138,19 @@ A possible presentation outline:
 
 # Paper
 
-Tibshirani, Robert. 1997. *The LASSO Method for Variable Selection in the Cox Model*. Statistics in Medicine, 16, 385--395.
+The following papers are listed in the order I plan to discuss them.
 
-PDF link coming soon.
+1. **Robert Tibshirani (1997), _The LASSO Method for Variable Selection in the Cox Model_**  
+   [Open PDF](papers/tibshirani-1997-lasso-cox.pdf)  
+   {download}`Download PDF <papers/tibshirani-1997-lasso-cox.pdf>`
+
+2. **D. R. Cox (1972), _Regression Models and Life-Tables_**  
+   [Open PDF](papers/cox-1972-regression-models-and-life-tables.pdf)  
+   {download}`Download PDF <papers/cox-1972-regression-models-and-life-tables.pdf>`
+
+3. **Robert Tibshirani (1996), _Regression Shrinkage and Selection via the Lasso_**  
+   [Open PDF](papers/tibshirani-1996-lasso.pdf)  
+   {download}`Download PDF <papers/tibshirani-1996-lasso.pdf>`
 
 # Notes
 
