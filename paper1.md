@@ -1,17 +1,27 @@
-# Survival Function Estimation
+# The LASSO Method for Variable Selection in the Cox Model
 
-## Author
+## Robert Tibshirani 1997
 
-To be added.
+<!-- Short introduction will be added here. -->
 
-## Paper
+### Key Contributions
 
-To be added.
+<!-- Key contributions will be added here. -->
 
-## Summary
+# Conversation with Robert Tibshirani
 
-To be added.
+<!-- Interview or related background material will be added here. -->
 
-## Slides
+# Summary
 
-Coming soon.
+<!-- Summary will be added here. -->
+
+# Presentation
+
+<!-- Presentation slides will be added here. -->
+
+# Paper
+
+<!-- Paper link or PDF will be added here. -->
+
+Download links for the summary, presentation, and paper will be added here later.
