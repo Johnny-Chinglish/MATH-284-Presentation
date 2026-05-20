@@ -140,17 +140,32 @@ A possible presentation outline:
 
 The following papers are listed in the order I plan to discuss them.
 
-1. **Robert Tibshirani (1997), _The LASSO Method for Variable Selection in the Cox Model_**  
-   [Open PDF](papers/tibshirani-1997-lasso-cox.pdf)  
-   {download}`Download PDF <papers/tibshirani-1997-lasso-cox.pdf>`
+## Robert Tibshirani 1997
 
-2. **D. R. Cox (1972), _Regression Models and Life-Tables_**  
-   [Open PDF](papers/cox-1972-regression-models-and-life-tables.pdf)  
-   {download}`Download PDF <papers/cox-1972-regression-models-and-life-tables.pdf>`
+**The LASSO Method for Variable Selection in the Cox Model**
 
-3. **Robert Tibshirani (1996), _Regression Shrinkage and Selection via the Lasso_**  
-   [Open PDF](papers/tibshirani-1996-lasso.pdf)  
-   {download}`Download PDF <papers/tibshirani-1996-lasso.pdf>`
+[Open PDF](papers/tibshirani-1997-lasso-cox.pdf)  
+{download}`Download PDF <papers/tibshirani-1997-lasso-cox.pdf>`
+
+<iframe src="papers/tibshirani-1997-lasso-cox.pdf" width="100%" height="650px"></iframe>
+
+## D. R. Cox 1972
+
+**Regression Models and Life-Tables**
+
+[Open PDF](papers/cox-1972-regression-models-and-life-tables.pdf)  
+{download}`Download PDF <papers/cox-1972-regression-models-and-life-tables.pdf>`
+
+<iframe src="papers/cox-1972-regression-models-and-life-tables.pdf" width="100%" height="650px"></iframe>
+
+## Robert Tibshirani 1996
+
+**Regression Shrinkage and Selection via the Lasso**
+
+[Open PDF](papers/tibshirani-1996-lasso.pdf)  
+{download}`Download PDF <papers/tibshirani-1996-lasso.pdf>`
+
+<iframe src="papers/tibshirani-1996-lasso.pdf" width="100%" height="650px"></iframe>
 
 # Notes
 
