@@ -6,120 +6,427 @@
   <title>MATH 284 Presentation</title>
 
   <style>
-    body {
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 0 20px;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #222;
-      background: #ffffff;
+    :root {
+      --sidebar-width: 310px;
+      --border: #d8dee4;
+      --text: #1f2328;
+      --muted: #656d76;
+      --link: #0969da;
+      --bg: #ffffff;
+      --sidebar-bg: #f6f8fa;
+      --card-bg: #ffffff;
+      --badge-bg: #fff8c5;
+      --badge-border: #d4a72c;
     }
 
-    h1 {
-      font-size: 36px;
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: var(--sidebar-width);
+      background: var(--sidebar-bg);
+      border-right: 1px solid var(--border);
+      padding: 24px 22px;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      overflow-y: auto;
+    }
+
+    .site-title {
+      font-size: 21px;
+      font-weight: 700;
+      margin: 0 0 8px 0;
+      line-height: 1.25;
+    }
+
+    .site-subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .nav-section {
+      margin-top: 24px;
+    }
+
+    .nav-heading {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
       margin-bottom: 8px;
     }
 
-    h2 {
-      margin-top: 32px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 6px;
+    .nav-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
-    .subtitle {
-      color: #555;
+    .nav-list li {
+      margin: 7px 0;
+      font-size: 14px;
+    }
+
+    .nav-list a {
+      color: #24292f;
+    }
+
+    .nav-list .placeholder {
+      color: var(--muted);
+      cursor: default;
+    }
+
+    .content {
+      margin-left: var(--sidebar-width);
+      width: calc(100% - var(--sidebar-width));
+      padding: 42px 56px 64px 56px;
+    }
+
+    .content-inner {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .top-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 28px;
+    }
+
+    .crumb {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .search-box {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 7px 12px;
+      color: var(--muted);
+      font-size: 14px;
+      min-width: 180px;
+      background: #f6f8fa;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin: 0 0 16px 0;
+      line-height: 1.25;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 38px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
       font-size: 18px;
-      margin-top: 0;
+      margin-top: 22px;
+    }
+
+    .lead {
+      font-size: 17px;
+      color: #30363d;
     }
 
     .card {
-      border: 1px solid #ddd;
-      border-radius: 10px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
       padding: 22px;
-      margin-top: 22px;
-      background: #fafafa;
+      margin: 22px 0;
     }
 
-    .status {
+    .badge {
       display: inline-block;
-      padding: 4px 10px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #6e4f00;
+      background: var(--badge-bg);
+      border: 1px solid var(--badge-border);
       border-radius: 999px;
-      background: #fff3cd;
-      border: 1px solid #ffe08a;
-      color: #664d03;
-      font-size: 14px;
-      font-weight: bold;
+      padding: 4px 10px;
+      margin-bottom: 10px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
     }
 
     .button {
       display: inline-block;
-      margin-top: 12px;
-      padding: 10px 16px;
       border-radius: 8px;
+      padding: 9px 14px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      background: #f6f8fa;
+      color: #24292f;
+    }
+
+    .button.primary {
       background: #0969da;
       color: white;
-      text-decoration: none;
-      font-weight: bold;
+      border-color: #0969da;
     }
 
     .button.disabled {
-      background: #999;
-      pointer-events: none;
+      color: #8c959f;
+      background: #f6f8fa;
       cursor: default;
+      pointer-events: none;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 15px;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--border);
+      padding: 12px 10px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      font-weight: 700;
+      background: #f6f8fa;
+    }
+
+    .status {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 14px;
+    }
+
+    .next-box {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid var(--border);
+      margin-top: 42px;
+      padding-top: 22px;
+      color: var(--muted);
     }
 
     footer {
-      margin-top: 48px;
+      border-top: 1px solid var(--border);
+      margin-top: 44px;
       padding-top: 18px;
-      border-top: 1px solid #ddd;
-      color: #666;
+      color: var(--muted);
       font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .layout {
+        display: block;
+      }
+
+      .sidebar {
+        position: static;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 28px 22px 48px 22px;
+      }
+
+      .top-line {
+        display: block;
+      }
+
+      .search-box {
+        margin-top: 12px;
+        display: inline-block;
+      }
     }
   </style>
 </head>
 
 <body>
-  <h1>MATH 284 Presentation</h1>
-  <p class="subtitle">UCSD MATH 284: Lifetime Data Analysis, Spring 2026</p>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="site-title">MATH 284 Presentation</div>
+      <div class="site-subtitle">Lifetime Data Analysis · Spring 2026</div>
 
-  <div class="card">
-    <span class="status">Slides coming soon</span>
+      <div class="nav-section">
+        <div class="nav-heading">Overview</div>
+        <ul class="nav-list">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#presentation">Current Presentation</a></li>
+          <li><a href="#papers">Papers</a></li>
+          <li><a href="#references">References</a></li>
+        </ul>
+      </div>
 
-    <h2>Presentation Information</h2>
+      <div class="nav-section">
+        <div class="nav-heading">Papers</div>
+        <ul class="nav-list">
+          <li><a href="#presentation">MATH 284 Final Presentation</a></li>
+          <li><span class="placeholder">Paper 1: To be added</span></li>
+          <li><span class="placeholder">Paper 2: To be added</span></li>
+          <li><span class="placeholder">Paper 3: To be added</span></li>
+          <li><span class="placeholder">Slides PDF: Coming soon</span></li>
+        </ul>
+      </div>
+    </aside>
 
-    <p><strong>Course:</strong> MATH 284 - Lifetime Data Analysis</p>
-    <p><strong>Presenter:</strong> Johnny Chinglish</p>
-    <p><strong>Topic:</strong> To be added</p>
-    <p><strong>Date:</strong> To be added</p>
+    <main class="content">
+      <div class="content-inner">
+        <div class="top-line">
+          <div class="crumb">MATH 284 / Presentation / Overview</div>
+          <div class="search-box">Search coming soon</div>
+        </div>
 
-    <a class="button disabled" href="#">Download slides PDF</a>
+        <section id="overview">
+          <h1>Overview</h1>
+
+          <p class="lead">
+            Welcome to my MATH 284 presentation website. This site will collect
+            my final presentation materials, notes, references, and eventually
+            related paper summaries for Lifetime Data Analysis.
+          </p>
+
+          <p>
+            The current goal is simple: first host my MATH 284 presentation.
+            Later, this page can be expanded into a small journal-club-style
+            collection of survival analysis papers, summaries, and slides.
+          </p>
+        </section>
+
+        <section id="presentation" class="card">
+          <span class="badge">Slides coming soon</span>
+
+          <h2>Current Presentation</h2>
+
+          <p><strong>Course:</strong> UCSD MATH 284: Lifetime Data Analysis</p>
+          <p><strong>Presenter:</strong> Johnny Chinglish</p>
+          <p><strong>Topic:</strong> To be added</p>
+          <p><strong>Date:</strong> To be added</p>
+
+          <div class="button-row">
+            <a class="button disabled" href="#">Download slides PDF</a>
+            <a class="button disabled" href="#">Presentation notes</a>
+            <a class="button disabled" href="#">Paper summary</a>
+          </div>
+
+          <p class="note">
+            The PDF, paper summary, and detailed notes will be added after the
+            presentation materials are ready.
+          </p>
+        </section>
+
+        <section id="papers">
+          <h2>Papers</h2>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Author</th>
+                <th>Paper / Topic</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Johnny Chinglish</td>
+                <td><a href="#presentation">MATH 284 Final Presentation</a></td>
+                <td class="status">Slides coming soon</td>
+              </tr>
+
+              <tr>
+                <td>To be added</td>
+                <td>Paper 1 title to be added</td>
+                <td class="status">Placeholder</td>
+              </tr>
+
+              <tr>
+                <td>To be added</td>
+                <td>Paper 2 title to be added</td>
+                <td class="status">Placeholder</td>
+              </tr>
+
+              <tr>
+                <td>To be added</td>
+                <td>Paper 3 title to be added</td>
+                <td class="status">Placeholder</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="note">
+            Papers without slides or summaries are kept as placeholders for now.
+          </p>
+        </section>
+
+        <section id="references">
+          <h2>References</h2>
+
+          <ul>
+            <li>Reference 1: To be added.</li>
+            <li>Reference 2: To be added.</li>
+            <li>Reference 3: To be added.</li>
+          </ul>
+        </section>
+
+        <div class="next-box">
+          <div>Previous: Overview</div>
+          <div>Next: Presentation details coming soon</div>
+        </div>
+
+        <footer>
+          By Johnny Chinglish · MATH 284 Presentation · © 2026
+        </footer>
+      </div>
+    </main>
   </div>
-
-  <h2>Overview</h2>
-  <p>
-    This website is created for my MATH 284 presentation.
-    The slides PDF will be posted here when it is ready.
-  </p>
-
-  <h2>Presentation Summary</h2>
-  <p>
-    A short summary of the presentation will be added here.
-  </p>
-
-  <h2>References</h2>
-  <ul>
-    <li>Reference 1: To be added</li>
-    <li>Reference 2: To be added</li>
-  </ul>
-
-  <h2>Future Updates</h2>
-  <p>
-    I may add more notes, paper summaries, or related materials to this site later.
-  </p>
-
-  <footer>
-    Maintained by Johnny Chinglish.
-  </footer>
 </body>
 </html>
