@@ -1,8 +1,8 @@
 # The LASSO Method for Variable Selection in the Cox Model
 
-## Robert Tibshirani 1997
+## Robert Tibshirani, 1997
 
-Tibshirani's 1997 paper is the main paper for my MATH 284 presentation. The paper extends the lasso idea to Cox proportional hazards regression, so that variable selection and coefficient shrinkage can be performed within the Cox partial likelihood framework.
+Tibshirani's 1997 paper is the main paper for my MATH 284 presentation. The paper extends the lasso idea to Cox proportional hazards regression, so that variable selection and coefficient shrinkage can be carried out within the Cox partial likelihood framework.
 
 The central idea is to estimate the Cox regression coefficients under an $L_1$ constraint:
 
@@ -14,23 +14,19 @@ This constraint shrinks coefficients toward zero and can set some coefficients e
 
 ### Key Contributions
 
-* **Extends the lasso to the Cox model:** The paper adapts the lasso from ordinary regression to Cox proportional hazards regression by applying an $L_1$ constraint to the Cox partial likelihood.
+* **Extends the lasso to Cox regression:** The paper adapts the lasso to the Cox proportional hazards model by applying an $L_1$ constraint to the Cox partial likelihood.
 
-* **Combines variable selection and shrinkage:** The method shrinks coefficient estimates toward zero and can set some coefficients exactly equal to zero.
+* **Combines shrinkage and variable selection:** The method shrinks coefficient estimates toward zero and can set some coefficients exactly equal to zero.
 
-* **Provides an alternative to stepwise selection:** Unlike stepwise methods, which make discrete keep-or-drop decisions, the lasso produces a continuous shrinkage path and tends to be more stable.
+* **Produces interpretable sparse models:** Variables with zero coefficients are removed from the fitted Cox model, leading to a simpler final model.
 
-* **Keeps the model interpretable:** Since some coefficients are estimated as zero, the final Cox model can be simpler and easier to interpret.
+* **Avoids modeling the baseline hazard:** The method works through the Cox partial likelihood, so no parametric form for $\lambda_0(t)$ is required.
 
-* **Uses only the Cox partial likelihood:** The method does not require specifying the baseline hazard function $\lambda_0(t)$.
-
-* **Discusses data-driven tuning:** The paper proposes using an approximate generalized cross-validation criterion to choose the constraint parameter $s$.
-
-* **Compares lasso with stepwise selection:** Through real examples and simulations, the paper shows that the lasso can have better prediction accuracy and lower variability than stepwise selection.
+* **Provides an alternative to stepwise selection:** The lasso gives a continuous regularization path and can be more stable than discrete stepwise selection procedures.
 
 # Background and Origins
 
-This presentation is centered on **Tibshirani (1997)**. The two background papers are included because they explain where the 1997 paper comes from.
+This presentation is centered on **Tibshirani (1997)**. The two background papers are included because they explain where the 1997 Cox lasso paper comes from.
 
 Conceptually, the 1997 paper combines two earlier ideas:
 
@@ -46,14 +42,14 @@ $$
 
 **Tibshirani (1996)** provides the statistical-learning framework: the lasso, which uses an $L_1$ constraint to shrink coefficients and produce sparse, interpretable models.
 
-# Talks and Interviews
+# Historical Context: Talks and Interviews
 
-The following videos provide background context on the two main figures behind this presentation: Sir David Cox, whose proportional hazards model is the foundation of modern survival regression, and Robert Tibshirani, who introduced the lasso and later adapted it to the Cox model.
+The following videos provide historical context for the two methodological lineages behind this presentation: Cox proportional hazards regression and lasso shrinkage.
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 1rem; margin-bottom: 1rem;">
 
   <div>
-    <h3>Sir David Cox</h3>
+    <p><strong>Sir David Cox</strong></p>
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
       <iframe
         src="https://www.youtube.com/embed/TiHCNRUiLKc?start=327"
@@ -71,7 +67,7 @@ The following videos provide background context on the two main figures behind t
   </div>
 
   <div>
-    <h3>Robert Tibshirani</h3>
+    <p><strong>Robert Tibshirani</strong></p>
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
       <iframe
         src="https://www.youtube.com/embed/3rvl4KV41JE"
@@ -90,7 +86,7 @@ The following videos provide background context on the two main figures behind t
 
 </div>
 
-# Presentation
+# Presentation Materials
 
 ## Presentation Slides
 
@@ -107,9 +103,7 @@ Coming soon.
 
 ## Main Paper
 
-### Robert Tibshirani 1997
-
-**The LASSO Method for Variable Selection in the Cox Model**
+**Robert Tibshirani (1997). _The LASSO Method for Variable Selection in the Cox Model_.**
 
 This is the main paper for my presentation. It proposes variable selection and shrinkage in Cox proportional hazards regression by optimizing the Cox partial likelihood under an $L_1$ constraint.
 
@@ -125,9 +119,7 @@ This is the main paper for my presentation. It proposes variable selection and s
 
 ## Background Papers
 
-### D. R. Cox 1972
-
-**Regression Models and Life-Tables**
+**D. R. Cox (1972). _Regression Models and Life-Tables_.**
 
 This paper is the origin of the Cox proportional hazards regression framework. It introduces regression modeling for censored failure-time data using a hazard function with an arbitrary baseline time component and unknown regression coefficients.
 
@@ -141,9 +133,7 @@ This paper is the origin of the Cox proportional hazards regression framework. I
 
 </details>
 
-### Robert Tibshirani 1996
-
-**Regression Shrinkage and Selection via the Lasso**
+**Robert Tibshirani (1996). _Regression Shrinkage and Selection via the Lasso_.**
 
 This paper is the origin of the lasso method. It introduces least absolute shrinkage and selection for regression, using an $L_1$ constraint to shrink coefficients and set some of them exactly equal to zero.
 
@@ -157,7 +147,7 @@ This paper is the origin of the lasso method. It introduces least absolute shrin
 
 </details>
 
-# Summary
+# Summary and Takeaways
 
 The paper begins with the Cox proportional hazards model:
 
@@ -199,8 +189,11 @@ $$
 
 When the constraint is loose, the estimate is close to the usual Cox partial likelihood estimate. When the constraint is tighter, coefficients are shrunk toward zero, and some coefficients become exactly zero. This gives a sparse Cox model.
 
-A key computational idea is to approximate the Cox partial likelihood problem by an iteratively reweighted least squares problem. At each step, the method solves a constrained weighted least squares problem and then updates the approximation.
+The main takeaway is that Tibshirani (1997) turns variable selection in Cox regression into a regularized partial-likelihood problem. The $L_1$ constraint connects classical survival regression with modern penalized regression.
 
-The paper also discusses how to choose the constraint parameter $s$. Tibshirani proposes an approximate generalized cross-validation criterion, which balances model fit against an estimate of model complexity.
+Key takeaways:
 
-The overall message is that the lasso is useful for Cox regression because it combines shrinkage, variable selection, and interpretability in one framework.
+* Cox regression provides the survival-analysis framework.
+* The lasso provides the shrinkage-and-selection mechanism.
+* The Cox lasso combines the two through penalized partial likelihood.
+* The resulting model can be sparse, interpretable, and more stable than stepwise selection.
