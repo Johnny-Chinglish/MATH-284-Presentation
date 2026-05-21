@@ -92,17 +92,16 @@ The following videos provide background context on the two main figures behind t
 
 # Presentation
 
-Slides coming soon.
+## Presentation Slides
 
-A possible presentation outline:
+Coming soon.
 
-1. Review the Cox proportional hazards model.
-2. Explain the variable selection problem in Cox regression.
-3. Introduce the original lasso idea.
-4. Show how the $L_1$ constraint is applied to the Cox partial likelihood.
-5. Discuss computation and tuning.
-6. Summarize the examples and simulations.
-7. Discuss strengths, limitations, and later extensions.
+## Algorithm Handout: Unified Cox Lasso Algorithms
+
+[Open PDF](unified-cox-lasso-algorithms.pdf)  
+<a href="unified-cox-lasso-algorithms.pdf" download>Download PDF</a>
+
+<iframe src="unified-cox-lasso-algorithms.pdf" width="100%" height="650px" style="border: 1px solid #ddd;"></iframe>
 
 # Papers
 
