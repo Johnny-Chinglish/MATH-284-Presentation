@@ -90,7 +90,10 @@ The following videos provide historical context for the two methodological linea
 
 ## Presentation Slides
 
-Coming soon.
+[Open PDF](cox-lasso-1997-slides.pdf)  
+<a href="cox-lasso-1997-slides.pdf" download>Download PDF</a>
+
+<iframe src="cox-lasso-1997-slides.pdf" width="100%" height="650px" style="border: 1px solid #ddd;"></iframe>
 
 ## Algorithm Handout: Unified Cox Lasso Algorithms
 
