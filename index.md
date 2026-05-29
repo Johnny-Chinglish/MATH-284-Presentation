@@ -12,4 +12,4 @@ The presentation page includes slides, an algorithm handout, background papers, 
 
 ## Acknowledgment
 
-The structure of this website was inspired by [*Statistical Ideas that Changed the World*](https://ledaliang.github.io/journalclub/), a journal-club-style website created for Professor Rob Tibshirani's Statistics 319 literature class.
+The structure of this website was inspired by [*Statistical Ideas that Changed the World*](https://ledaliang.github.io/journalclub/), a journal-club-style website created for Professor Robert Tibshirani's Statistics 319 literature class.
