@@ -20,5 +20,4 @@ html:
 sphinx:
   config:
     html_extra_path:
-      - papers
       - materials
